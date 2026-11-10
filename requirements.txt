@@ -1,4 +1,6 @@
-requests
-PyQt5
-musicdl
+# Graphical window (musicdownload.py). PySide6 is the Qt binding.
+# PyQt5 is not imported anywhere in this project; do not install it.
+# For the command line, use requirements-cli.txt instead of this file.
 PySide6
+requests
+musicdl

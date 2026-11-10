@@ -1,4 +1,9 @@
 /.musicdl_temp
+/.venv
+/musicdl_outputs
+/已下载音乐
 /build
 /dist
+/__pycache__/
+*.py[cod]
 /*.spec

@@ -21,7 +21,9 @@ The Ultimate Music Downloader: Supports lossless audio downloads, batch download
 
 Enables music search and downloading from major streaming platforms—including Kugou, Kuwo, QQ Music, NetEase Cloud Music, Migu, and others—with full support for downloading lossless audio files.
 
-Based on the [musicdl](https://github.com/CharlesPikachu/musicdl) project, modified from the [musicdlgui.py](https://github.com/CharlesPikachu/musicdl/blob/master/examples/musicdlgui/musicdlgui.py) file, and then optimized the interface and functionality using AI tools.
+The window is based on [musicdl](https://github.com/CharlesPikachu/musicdl) and [musicdlgui.py](https://github.com/CharlesPikachu/musicdl/blob/master/examples/musicdlgui/musicdlgui.py). The upstream repository is [MrsEWE44/musicDownload](https://github.com/MrsEWE44/musicDownload).
+
+This copy also has a command-line entry point that does not need PySide6. The CLI requires Python 3.10 or newer.
 
 ### Screenshots:
 
@@ -42,6 +44,31 @@ Based on the [musicdl](https://github.com/CharlesPikachu/musicdl) project, modif
     </td>
   </tr>
 </table>
+
+### Command line
+
+```bash
+git clone <your-repo-url>
+cd musicDownload
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-cli.txt
+
+python musicdownload_cli.py search "artist name" --sources netease --limit 5
+python musicdownload_cli.py download "artist name" --sources netease --limit 6 --all --versions 3 --format flac --out ./已下载音乐
+```
+
+`--versions 3` keeps at most three files for the same title. `--format` accepts `mp3`, `flac`, `wav`, `m4a`, or `any`. For the language batches:
+
+```bash
+FORMAT=flac ./download_by_language.sh ./已下载音乐 234
+```
+
+The second argument is the cap for each language directory.
+
+### Graphical window
+
+The window needs PySide6 from `requirements.txt`.
 
 ### Run Example：
 

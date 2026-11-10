@@ -1,0 +1,3 @@
+# Command-line only. Python >= 3.10.
+# Do not install PySide6 or PyQt5 for this entry point.
+musicdl>=2.10.2
